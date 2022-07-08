@@ -1,0 +1,24 @@
+.navbar-brand{
+    font-size:medium;
+    font-family: sans-serif ;
+    color: gray;
+    padding-left: 100px;
+}
+.navbar-brand-about{
+    font-size: smaller;
+    font-family: sans-serif;
+    color: grey;
+    padding-right: 60px;
+
+}
+.navbar bg-light{
+    background-color: #a6a6a6;
+    border-color: black;
+}
+
+.heading{
+    text-align:left;
+    padding-left: 300px;
+    padding-top: 50px;
+    color: #404040;
+}
