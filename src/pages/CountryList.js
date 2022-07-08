@@ -33,6 +33,7 @@ function CountryList() {
           </Col>
         </Row>
       </Container>
+
       <Container className="card-container">
         <Row md={4}>
           <Col>
@@ -49,6 +50,7 @@ function CountryList() {
           </Col>
         </Row>
       </Container>
+      
       <Container className="card-container">
         <Row md={4}>
           <Col>
