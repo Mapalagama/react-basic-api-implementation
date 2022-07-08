@@ -21,27 +21,27 @@ export default function Country() {
             <h2>Names</h2>
             <table>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Common</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Official</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Common(native)</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Ofiicial(native)</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Alternative spellings</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Translation</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
             </table>
@@ -50,27 +50,27 @@ export default function Country() {
             <h2>Codes</h2>
             <table className="table-border">
               <tr className="table-row">
-                <th>Codes</th>
+                <th>ISO 3166-1 alpha-2</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr>
-                <th>Official</th>
+                <th>ISO 3166-1 alpha-3</th>
                 <td className="table-coloum">Democtritc</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>ISO 3166-1 numeric</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>International calling code</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>ISO 4217 currency code</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Top level domains</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
             </table>
@@ -81,18 +81,18 @@ export default function Country() {
             <h2>Language</h2>
             <table>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Native language</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Languages</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>sin</th>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>tam</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
             </table>
@@ -101,31 +101,31 @@ export default function Country() {
             <h2>Geography</h2>
             <table>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Region</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Subregion</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Capital</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Demonym</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Lat/Lng</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Area</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
               <tr className="table-row">
-                <th>Codes</th>
+                <th>Land borders</th>
                 <td className="table-coloum">commonProp</td>
               </tr>
             </table>
