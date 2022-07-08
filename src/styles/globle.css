@@ -14,3 +14,27 @@
     padding-top: 40px;
     padding-left: 120px;
 }
+.heading{
+    margin-left: 300px;
+}
+.name-row{
+    padding-left: 50px;
+    padding-right: 2px;
+}
+.table-border{
+    border: 1px solid;
+}
+.table-row{
+    border: 1px solid;
+}
+.table-coloum{
+    border: 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.country-flag{
+    width:390px !important;
+    height: 172px!important;
+    margin-top: 47px!important;
+    margin-left: 40px!important;
+}
