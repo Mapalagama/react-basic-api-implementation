@@ -1,0 +1,16 @@
+.card-box{
+    width: 18rem;
+}
+.card-header{
+    width: 18rem;
+}
+.country-local-name{
+    font-size: 12px;
+}
+.list-group-item{
+    font-weight: bold;
+}
+.country-card-prop{
+    font-weight: 400;
+    margin-right: 50px;
+}
