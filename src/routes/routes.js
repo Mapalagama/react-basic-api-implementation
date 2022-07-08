@@ -1,6 +1,6 @@
 const appRoutes = {
     COUNTRIES:'/countries',
-    COUNTRY:'/country'
+    COUNTRY:'/country/:code'
 }
 
 export default appRoutes;

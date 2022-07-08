@@ -4,24 +4,44 @@ import CountryCard from "../components/CountryCard/CountryCard";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setCountries } from "../redux/action/countryAction";
+import { getCountries } from "../services/countryService";
+
 
 function CountryList() {
-  const [countryList, setCountryList] = useState([]);
-
   const [country, setCountry] = useState("");
+  const [searchedCountryList, setSearchedCountryList] = useState([]);
 
-  async function getCountries() {
-    await axios
-      .get(`https://restcountries.com/v3.1/name/${country}`)
-      .then((res) => {
-        console.log(res.data);
-        setCountryList(res.data);
-      });
-  }
+  const { countryList } = useSelector((state) => state.country);
+  const dispatch = useDispatch();
+
   //Api calling
   useEffect(() => {
-    getCountries();
+    if (countryList.length == 0) {
+      getCountries(dispatch, setCountries);
+    } else {
+      setSearchedCountryList(countryList);
+    }
+  }, [countryList]);
+
+  useEffect(() => {
+    if (countryList.length > 0) {
+      var cl = countryList.filter((ctr, index) => {
+        var re = new RegExp(`^.*${country}.*$`, "i");
+        const match = ctr.name.common.match(re);
+
+        var countryName = match ? match[0] : "";
+        console.log({ countryName }, ctr.name.common);
+        console.log(countryName == ctr.name.common);
+
+        if (countryName == ctr.name.common) {
+          console.log(countryList[index]);
+          return countryList[index];
+        }
+      });
+      setSearchedCountryList(cl);
+    }
   }, [country]);
 
   return (
@@ -39,58 +59,16 @@ function CountryList() {
 
       <Container className="card-container">
         <Row md={4}>
-          {countryList.map((e, index) => {
-            return (
-              <Col key = {index}>
-                <CountryCard data={e} />
-              </Col>
-            );
-          })}
-          {/* <Col xs={6}>
-            <CountryCard />
-          </Col>
-          <Col>
-            <CountryCard />
-          </Col>
-          <Col>
-            <CountryCard />
-          </Col> */}
+          {searchedCountryList &&
+            searchedCountryList.map((e, index) => {
+              return (
+                <Col key={index}>
+                  <CountryCard data={e} />
+                </Col>
+              );
+            })}
         </Row>
       </Container>
-
-      {/* <Container className="card-container">
-        <Row md={4}>
-          <Col>
-            <CountryCard />
-          </Col>
-          <Col xs={6}>
-            <CountryCard />
-          </Col>
-          <Col>
-            <CountryCard />
-          </Col>
-          <Col>
-            <CountryCard />
-          </Col>
-        </Row>
-      </Container>
-
-      <Container className="card-container">
-        <Row md={4}>
-          <Col>
-            <CountryCard />
-          </Col>
-          <Col xs={6}>
-            <CountryCard />
-          </Col>
-          <Col>
-            <CountryCard />
-          </Col>
-          <Col>
-            <CountryCard />
-          </Col>
-        </Row>
-      </Container> */}
 
       <div className="country-list-container"></div>
     </div>
