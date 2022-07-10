@@ -45,7 +45,7 @@ function CountryCard({ data }) {
               <Row>
                 <Col lg={10}>Country Code (Alpha 3) </Col>
                 <Col lg={2}>
-                  <span className="lead">{data.cca3}</span>
+                  <span id="countryProp" className="d-flex justify-content-end">{data.cca3}</span>
                 </Col>
               </Row>
             </li>
@@ -61,7 +61,7 @@ function CountryCard({ data }) {
               <Row>
                 <Col lg={10}>Initial dial code</Col>
                 <Col lg={2}>
-                  <span className="lead">
+                  <span  id="countryProp" className="d-flex justify-content-end">
                     {data?.idd?.root}
                     {data?.idd?.suffixes}
                   </span>
@@ -72,14 +72,7 @@ function CountryCard({ data }) {
               <Row>
                 <Col lg={4}>Languages</Col>
                 <Col className="d-flex justify-content-end" lg={8}>
-                  <span className="lead">
-                    {/* {languages
-                      ? Object.keys(data?.languages).map((e, index) => {
-                          return <p key={index}>{data.languages[e]}</p>;
-                        })
-                      : ""} */}
-                    {getLanguage(data, "languages")}
-                  </span>
+                  <span className="lead">{getLanguage(data, "languages")}</span>
                 </Col>
               </Row>
             </li>

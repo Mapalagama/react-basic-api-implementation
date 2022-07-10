@@ -65,16 +65,16 @@ export default function Country() {
                 <tr className="table-row">
                   <th>Ofiicial(native)</th>
                   <td className="table-coloum">
-                    {getNativeName(selectedCountry.name, "nativeName")}
+                    <span className="alt-spelling">{getNativeName(selectedCountry.name, "nativeName")}</span>
                   </td>
                 </tr>
                 <tr className="table-row">
                   <th>Alternative spellings</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">dummy-prop</td>
                 </tr>
                 <tr className="table-row">
                   <th>Translation</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">dummy-prop</td>
                 </tr>
               </table>
             </Row>
@@ -83,27 +83,27 @@ export default function Country() {
               <table className="table-border">
                 <tr className="table-row">
                   <th>ISO 3166-1 alpha-2</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.cca2}</td>
                 </tr>
                 <tr>
                   <th>ISO 3166-1 alpha-3</th>
-                  <td className="table-coloum">Democtritc</td>
+                  <td className="table-coloum">{selectedCountry.cca3}</td>
                 </tr>
                 <tr className="table-row">
                   <th>ISO 3166-1 numeric</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.ccn3}</td>
                 </tr>
                 <tr className="table-row">
                   <th>International calling code</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.idd.root}{selectedCountry.idd.suffixes}</td>
                 </tr>
                 <tr className="table-row">
                   <th>ISO 4217 currency code</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">dummy-prop</td>
                 </tr>
                 <tr className="table-row">
                   <th>Top level domains</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{getLanguage(selectedCountry, "tld", true)}</td>
                 </tr>
               </table>
             </Row>
@@ -114,7 +114,7 @@ export default function Country() {
               <table>
                 <tr className="table-row">
                   <th>Native language</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">dummy-prop</td>
                 </tr>
                 <tr className="table-row">
                   <th>Languages</th>
@@ -128,31 +128,31 @@ export default function Country() {
               <table>
                 <tr className="table-row">
                   <th>Region</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.region}</td>
                 </tr>
                 <tr className="table-row">
                   <th>Subregion</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.subregion}</td>
                 </tr>
                 <tr className="table-row">
                   <th>Capital</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.capital[0]}</td>
                 </tr>
                 <tr className="table-row">
                   <th>Demonym</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{}</td>
                 </tr>
                 <tr className="table-row">
                   <th>Lat/Lng</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.latlng}</td>
                 </tr>
                 <tr className="table-row">
                   <th>Area</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.area}</td>
                 </tr>
                 <tr className="table-row">
                   <th>Land borders</th>
-                  <td className="table-coloum">commonProp</td>
+                  <td className="table-coloum">{selectedCountry.borders[0]}</td>
                 </tr>
               </table>
             </Row>
@@ -162,7 +162,7 @@ export default function Country() {
               <img
                 className="country-flag"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/800px-Flag_of_Sri_Lanka.svg.png"
-                alt="W3Schools.com"
+                alt="country-flag"
               />
             </Row>
           </Col>

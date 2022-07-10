@@ -12,10 +12,11 @@
 }
 .card-container.container{
     padding-top: 40px;
-    padding-left: 120px;
+    padding-left: 10px;
 }
 .heading{
     margin-left: 300px;
+    padding-left: 0%;
 }
 .name-row{
     padding-left: 50px;
@@ -38,3 +39,4 @@
     margin-top: 47px!important;
     margin-left: 40px!important;
 }
+
